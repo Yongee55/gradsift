@@ -1,0 +1,24 @@
+{% extends "web_template.html" %}
+{% load static %} 
+<link rel="stylesheet" type="text/css" href="{% static 'applicant/style.css' %}">
+
+{% block  header %}
+
+{% endblock %}
+{% block  body %}
+    <div class='col-md-12'>
+        <h1>Create Profile</h1>
+    </div>
+    
+        <ul>
+            <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
+            <li>
+                <h3>Question: <a href="#">ddsds</a></h3><br>
+                <a class='btn btn-default' href="#">Result</a><br><br>
+                <a class='btn btn-success'  href="#">Vote</a><br>
+            </li>
+       
+        </ul>
+  
+    
+{% endblock %}

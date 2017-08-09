@@ -1,0 +1,66 @@
+{% load static %}
+<html>
+    <head>
+        <title>Main</title>
+        <script src="{% static 'main/jquery-3.2.1.js' %}"></script>   
+        {% comment %} <script src="{% static 'howdy/jquery-ui/jquery-ui.js' %}"></script>    {% endcomment %}
+        {% comment %} <link rel="stylesheet" type="text/css" link="{% static 'howdy/jquery-ui/jquery-ui.css' %}"> {% endcomment %}
+        <script src="{% static 'main/bootstrap.js' %}"></script>   
+        <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap.min.css' %}">
+         {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'howdy/bootstrap-reboot.css' %}">   {% endcomment %}
+         {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'howdy/bootstrap-grid.css' %}">  {% endcomment %}
+        <style>
+            body {
+                padding-top: 50px;
+            }
+            .container {
+                margin-right: auto;
+                margin-left: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .page-header{
+                margin: 46px 0 23px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../" class="navbar-brand">GradSift</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                       
+                        <li>
+                             <a href="/">Home</a> 
+                        </li>
+                        <li>
+                            <!-- <a href="/about/">About</a> -->
+                        </li>
+                       
+                    </ul>
+
+                    {% comment %} <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" target="_blank"></a></li>
+                        <li><a href="#" target="_blank"></a></li>
+                    </ul> {% endcomment %}
+
+                </div>
+            </div>
+        </div>
+        <div class='container'>   
+            {% block  header %}default header{% endblock %}
+            <div class='page-header'>
+                {% block  body %}default body{% endblock %}
+            </div>
+            {% block  footer %}default footer{% endblock %}
+        </div>  
+    </body>
+</html>
